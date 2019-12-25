@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  table, td{
+    border: 1px solid black;
+  }
+</style>
+<link rel="stylesheet" href="b.css">
+
+</script>
+</head>
+<body>
+  <div>
+
+<fieldset>
+
+<fieldset>
+  Registration form
+</fieldset>
+<p>Event Name
+International Conference on Information & Communication Technology for the Muslim World (ICT4M 2018)</p>
+
+  <table id="myTable">
+          <th>Name</th>
+          <th>Rate</th>
+</table>
+<br>
+<button type="button" onclick="insertRow()">Add Participant</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<label for="phoneno">Phone number</label>
+<input type="text" name="phoneno" value=""><br>
+<br><label for="email">Email</label>
+<input type="text" name="email" value=""><br>
+<br>
+<br>
+<button type="submit" name="submit">Submit</button>
+</fieldset>
+  </div>
+
+
+<script>
+  var index = 1;
+  function insertRow(){
+              var table=document.getElementById("myTable");
+              var row=table.insertRow(table.rows.length);
+              var cell1=row.insertCell(0);
+              var t1=document.createElement("input");
+                  t1.id = "txtName"+index;
+                  cell1.appendChild(t1);
+              var cell2=row.insertCell(1);
+              var t2=document.createElement("select");
+              var option1 = document.createElement("option");
+              option1.innerHTML = "Local Participant without Paper";
+              option1.value = "1";
+              t2.add(option1, null);
+              var option2 = document.createElement("option");
+              option2.innerHTML = "International Participant without Paper";
+              option2.value = "2";
+              t2.add(option2, null);
+              var option3 = document.createElement("option");
+              option3.innerHTML = "Presenter (International)";
+              option3.value = "3";
+              t2.add(option3, null);
+
+              var option4 = document.createElement("option");
+              option4.innerHTML = "Presenter (Local)";
+              option4.value = "4";
+              t2.add(option4, null);
+
+              var option5 = document.createElement("option");
+              option5.innerHTML = "Student (Presenter)";
+              option5.value = "5";
+              t2.add(option5, null);
+
+              var option6 = document.createElement("option");
+              option6.innerHTML = "Exhibition";
+              option6.value = "6";
+              t2.add(option6, null);
+
+              var option7 = document.createElement("option");
+              option7.innerHTML = "International Student (Presenter)";
+              option7.value = "7";
+              t2.add(option7, null);
+
+              var option8 = document.createElement("option");
+              option8.innerHTML = "Full-day Workshop";
+              option8.value = "8";
+              t2.add(option8, null);
+
+              var option9 = document.createElement("option");
+              option9.innerHTML = "Mini Workshop";
+              option9.value = "9";
+              t2.add(option9, null);
+                  cell2.appendChild(t2);
+
+        index++;
+
+  }
+</script>
+
+</body>
+</html>
